@@ -1,0 +1,14 @@
+button {
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 15px 85px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+button.hovered {
+  color: rgb(50, 64, 55);
+  background-color: rgb(241, 236, 215);
+}

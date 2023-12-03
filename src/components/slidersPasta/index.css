@@ -1,0 +1,109 @@
+/* pour le slider */
+.slider1-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .slider1 {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  .slider1 img{
+   width: 35%;
+   height: 90%;
+   --color: rgb(50, 64, 55); ;
+   --border: 10px;   /* the border thickness*/
+   --offset: 20px;   /* control the offset*/
+   --gap: 5px;       /* the gap on hover */
+   --_c: var(--color) var(--border), #0000 0 calc(100% - var(--border)),var(--color) 0;
+   --_o: calc(3*var(--offset));
+   padding: 
+     calc(var(--gap) + var(--border))
+     calc(var(--gap) + var(--border) + var(--offset))
+     calc(var(--gap) + var(--border) + var(--offset))
+     calc(var(--gap) + var(--border));
+   background: 
+     linear-gradient(      var(--_c)) var(--_o) var(--_o), 
+     linear-gradient(90deg,var(--_c)) var(--_o) var(--_o);
+     background-size: calc(100% - var(--offset)) calc(100% - var(--offset));
+   background-repeat: no-repeat;
+   filter: grayscale(.2);
+   transition:  .5s;
+   cursor: pointer;
+  }
+  img:hover {
+    background-position: 0px 0px;
+    background-size: calc(100% - var(--offset)) calc(100% - var(--offset));
+    --color:hsla( 47.999999999999986,57.69230769230775%,89.80392156862746% ,1);
+    filter: grayscale(0);
+  }
+  .slide1 {
+    display: flex;
+    justify-content: space-evenly;
+    flex: 0 0 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  @keyframes menu{
+    from{
+      transform: translateX(100px);
+      opacity: 0;
+    }
+    to{
+      transform: translateX(-100px);
+      opacity: 1;
+    }
+  }
+
+  .slide1.active ul{
+    animation: menu 3s forwards ;
+  }
+  .slide1 ul{
+    list-style-type: none;
+    margin-left: 5%;
+    width: 30%;
+    height: 30%;
+    
+    
+  
+  }
+  .slide1>ul>li> {
+    
+    
+    color:  rgb(214, 227, 244);
+  
+  }
+
+  .slide1.active {
+    opacity: 1;
+    
+  }
+/*  */
+/* pour les bouttons du slider */
+.prev1,
+.next1 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.prev1:hover,
+
+
+.prev1 {
+  top: 90%;
+  left: 30%;  
+}
+
+.next1 {
+  top: 90%;
+  right: 55%;
+}
+/*  */

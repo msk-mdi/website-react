@@ -1,0 +1,25 @@
+[ 
+    {
+      "id": 1,
+      "name": "Spaghetti Bolognese",
+      "description": "Spaghetti avec une sauce riche en Bolognese.",
+      "price": 15.99,
+      "image": "bolognese.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Fettuccine Alfredo",
+      "description": "Sauce Alfredo crémeuse avec des fettuccine pasta.",
+      "price": 16.99,
+      "image": "alfredo.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Ravioli",
+        "description": "",
+        "price": 14.99,
+        "image": "ravioli.jpg"
+    }
+  ]
+  
+  

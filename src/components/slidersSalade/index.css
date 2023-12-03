@@ -1,0 +1,100 @@
+/* pour le slider */
+.slider2-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider2 {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.slider2 img {
+  width: 35%;
+  height: 90%;
+  --color: rgb(50, 64, 55);
+  --border: 10px; /* the border thickness*/
+  --offset: 20px; /* control the offset*/
+  --gap: 5px; /* the gap on hover */
+  --_c: var(--color) var(--border), #0000 0 calc(100% - var(--border)),
+    var(--color) 0;
+  --_o: calc(3 * var(--offset));
+  padding: calc(var(--gap) + var(--border))
+    calc(var(--gap) + var(--border) + var(--offset))
+    calc(var(--gap) + var(--border) + var(--offset))
+    calc(var(--gap) + var(--border));
+  background: linear-gradient(var(--_c)) var(--_o) var(--_o),
+    linear-gradient(90deg, var(--_c)) var(--_o) var(--_o);
+  background-size: calc(100% - var(--offset)) calc(100% - var(--offset));
+  background-repeat: no-repeat;
+  filter: grayscale(0.2);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.slide2 {
+  display: flex;
+  justify-content: space-evenly;
+  flex: 0 0 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+@keyframes menu {
+  from {
+    transform: translateX(70px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-70px);
+    opacity: 1;
+  }
+}
+.slide2.active ul {
+  animation: menu 3s forwards;
+}
+.slide2 ul {
+  list-style-type: none;
+  margin-left: 5%;
+  width: 30%;
+  height: 30%;
+}
+img:hover {
+  background-position: 0px 0px;
+  background-size: calc(100% - var(--offset)) calc(100% - var(--offset));
+  --color: hsla(47.999999999999986, 57.69230769230775%, 89.80392156862746%, 1);
+  filter: grayscale(0);
+}
+.color {
+  color: hsla(47.999999999999986, 57.69230769230775%, 89.80392156862746%, 1);
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.slide2.active {
+  opacity: 1;
+}
+/*  */
+/* pour les bouttons du slider */
+.prev2,
+.next2 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.prev2:hover,
+.prev2 {
+  top: 90%;
+  left: 55%;
+}
+
+.next2 {
+  top: 90%;
+  right: 30%;
+}
+/*  */

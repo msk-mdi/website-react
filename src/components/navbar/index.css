@@ -1,0 +1,22 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 50px;
+}
+
+nav a {
+  color: rgb(235, 235, 235);
+  text-decoration: none;
+  vertical-align: middle;
+}

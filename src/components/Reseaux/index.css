@@ -1,0 +1,15 @@
+.LogoReseaux ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.LogoReseaux ul li {
+  display: inline;
+  margin-right: 30px;
+}
+ul li img {
+  width: 20px;
+  height: 20px;
+}

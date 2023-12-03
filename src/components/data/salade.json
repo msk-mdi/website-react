@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Insalata Caprese",
+    "description": "Tomates, mozzarella di bufala, basilic, huile d'olive.",
+    "price": 15.99,
+    "image": "bolognese.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Insalata di Mare",
+    "description": "Salade de fruits de mer avec des calmars, crevettes, moules, citron.",
+    "price": 19.99,
+    "image": "alfredo.jpg"
+  },
+  {
+      "id": 3,
+      "name": "Panzanella",
+      "description": "Salade de pain toscan, tomates, concombres, oignons rouges, basilic.",
+      "price": 14.99,
+      "image": "panzanella.jpg"
+  }
+]
